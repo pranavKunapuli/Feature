@@ -8,8 +8,8 @@ phiture.factory("Firebase", function() {
 phiture.config(["$routeProvider", function($routeProvider) {
     $routeProvider.
         when("/", {
-            templateURL: "app/templates/landing.html",
-            controller: LandingController
+            templateUrl: "app/templates/landing.html",
+            controller: "LandingController"
         }).
         otherwise({
             redirectTo: "/"
