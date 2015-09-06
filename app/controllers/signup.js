@@ -2,11 +2,6 @@ angular.module("phiture").controller("SignUpController", function($scope, $route
     var ref = firebase;
     $scope.signupType = $routeParams.signupID;
 
-    $scope.first_name = "Pranav";
-    $scope.last_name = "Kunapuli";
-    $scope.email = "blah4@gmail.com";
-    $scope.password = "pranav";
-
     $scope.clientSignUp = function() {
         $scope.userType = "Clients";
         $scope.signUp();
@@ -35,6 +30,10 @@ angular.module("phiture").controller("SignUpController", function($scope, $route
             }
         });
 
-        $location.path("/homepage");
+        if($scope.userType == "Clients") {
+            $location.path("/client_homepage");
+        } else {
+            $location.path("/performer_homepage");
+        }
     };
 });
