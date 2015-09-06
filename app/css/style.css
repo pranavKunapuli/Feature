@@ -8,8 +8,16 @@
     width: 512px;
 }
 
+.mdl-card__border {
+    border-radius: 30px;
+}
+
 .mdl-card__extra-wide {
-    width: 800px;
+    width: 650px;
+}
+
+.mdl-card__title.accent-color {
+    color: white;
 }
 
 .mdl-card__title-text {
