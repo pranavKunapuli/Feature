@@ -3,10 +3,41 @@ angular.module("phiture").controller("LoginController", ["$scope", "$routeParams
     $scope.loginType = $routeParams.loginID;
 
     $scope.clientLogin = function() {
-        console.log("client login");
-    };
+        var clients = ref.child("Clients");
+        clients.once("value", function(snap) {
+            snap.forEach(function(data) {
+                if(data.val().email == $scope.email) {
+                    $scope.login();
+                    $location.path("/client_homepage");
+                }
+            })
+        });
+
+        alert("We could not find a client by that email");
+    }
 
     $scope.performerLogin = function() {
-        console.log("perfomer login");
+        var performers = ref.child("Performers");
+        performers.once("value", function(snap) {
+            snap.forEach(function(data) {
+                if(data.val().email == $scope.email) {
+                    $scope.login();
+                    $location.path("/performer_homepage");
+                }
+            })
+        });
+    }
+
+    $scope.login = function() {
+        ref.authWithPassword({
+            email: $scope.email,
+            password: $scope.password
+        }, function(error, userData) {
+            if(error) {
+                console.log("Error logging user in");
+            } else {
+                console.log("Successful Login");
+            }
+        });
     };
 }]);
