@@ -1,5 +1,17 @@
-<h1>Welcome to the Landing Page</h1>
-<button type="button" name="client" ng-click="clientLoginRedirect()">Client Login</button>
-<button type="button" name="performers" ng-click="performerLoginRedirect()">Performer Login</button>
-<button type="button" name="signup" ng-click="clientSignupRedirect()">Client Sign Up</button>
-<button type="button" name="signup" ng-click="performerSignupRedirect()">Performer Sign Up</button>
+<div class="mdl-card">
+    <div class="mdl-card__title">Welcome to &#934-ture</div>
+    <div class="mdl-card__supporting-text">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="clientLoginRedirect()">
+          Client Login
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="performerLoginRedirect()">
+          Performer Login
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" ng-click="clientSignupRedirect()">
+          Client Registration
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" ng-click="performerSignupRedirect()">
+          Performer Registration
+        </button>
+    </div>
+</div>

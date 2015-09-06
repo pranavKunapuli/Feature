@@ -21,28 +21,15 @@
         <script type="text/javascript" src="app/controllers/client_home.js"></script>
         <script type="text/javascript" src="app/controllers/performer_home.js"></script>
 
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.deep_purple-light_blue.min.css">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="app/css/palette.css">
+
         <meta charset="utf-8">
         <title>Phiture</title>
     </head>
     <body>
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '959177107481815',
-              xfbml      : true,
-              version    : 'v2.4'
-            });
-          };
-
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-        </script>
-
         <div ng-view></div>
     </body>
 </html>
