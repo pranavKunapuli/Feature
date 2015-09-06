@@ -1,0 +1,32 @@
+.mdl-card__center {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mdl-card__wide {
+    width: 512px;
+}
+
+.mdl-card__extra-wide {
+    width: 800px;
+}
+
+.mdl-card__title-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mdl-card__login {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mdl-layout__header-row {
+    border-bottom: solid 2px #03A9F4;
+}
+
+.mdl-layout-title {
+    color: white;
+}
