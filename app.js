@@ -1,7 +1,7 @@
-var phiture = angular.module("phiture", ["ngRoute"]);
+var phiture = angular.module("phiture", ["ngRoute", "firebase"]);
 
-phiture.factory("Firebase", function() {
-    var ref = new Firebase("https://phiture.firebaseio.com");
+phiture.factory("firebase", function() {
+    var ref = new Firebase("https://phiture.firebaseio.com/");
     return ref;
 });
 
@@ -18,7 +18,15 @@ phiture.config(["$routeProvider", function($routeProvider) {
         when("/signup/:signupID", {
             templateUrl: "app/templates/signup.html",
             controller: "SignUpController"
-        })
+        }).
+        when("/client_homepage", {
+            templateUrl: "app/templates/client_homepage.html",
+            controller: "ClientHomeController"
+        }).
+        when("/performer_homepage", {
+            templateUrl: "app/templates/performer_homepage.html",
+            controller: "PerformerHomeController"
+        }).
         otherwise({
             redirectTo: "/"
         });

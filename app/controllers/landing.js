@@ -1,5 +1,5 @@
-angular.module("phiture").controller("LandingController", function($scope, $location, Firebase) {
-    var ref = Firebase;
+angular.module("phiture").controller("LandingController", function($scope, $location, firebase) {
+    var ref = firebase;
 
     $scope.clientLoginRedirect = function() {
         $location.path("/login/0");
