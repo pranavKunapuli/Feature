@@ -1,7 +1,41 @@
-<h1>Login to your Account</h1>
-<form>
-    <input type="text" ng-model="email" placeholder="Email"></br>
-    <input type="text" ng-model="password" placeholder="Password">
-</form>
-<button type="button" name="clientLogin" ng-click="clientLogin()">Login as Client</button>
-<button type="button" name="clientLogin" ng-click="performerLogin()">Login as Performer</button>
+<div class="mdl-layout mdl-js-layout">
+    <header "mdl-layout__header">
+        <div class="mdl-layout__header-row default-primary-color">
+            <div class="mdl-layout-spacer"></div>
+            <h1 class="mdl-layout-title">&#934-ture</h1>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-card mdl-shadow--2dp mdl-card__center mdl-card__wide">
+                <div class="mdl-card__title mdl-card--border accent-color">
+                    <h1 class="mdl-card__title-text">Sign In to &#934-ture</h1>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <!-- Textfield with Floating Label -->
+                    <form action="#">
+                      <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="email" ng-model="email"/>
+                        <label class="mdl-textfield__label" for="email">Email Address</label>
+                      </div>
+                    </form>
+                    <form action="#">
+                      <div class="mdl-textfield mdl-js-textfield">
+                          <input class="mdl-textfield__input" type="text" id="password" ng-model="password"/>
+                          <label class="mdl-textfield__label" for="password">Password</label>
+                      </div>
+                    </form>
+                </div>
+                <div class="mdl-card__actions">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="clientLogin()">
+                      Client Login
+                    </button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="performerLogin()">
+                      Performer Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
