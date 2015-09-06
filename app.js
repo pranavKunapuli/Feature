@@ -11,6 +11,14 @@ phiture.config(["$routeProvider", function($routeProvider) {
             templateUrl: "app/templates/landing.html",
             controller: "LandingController"
         }).
+        when("/login/:loginID", {
+            templateUrl: "app/templates/login.html",
+            controller: "LoginController"
+        }).
+        when("/signup/:signupID", {
+            templateUrl: "app/templates/signup.html",
+            controller: "SignUpController"
+        })
         otherwise({
             redirectTo: "/"
         });

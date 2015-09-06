@@ -9,7 +9,11 @@ angular.module("phiture").controller("LandingController", function($scope, $loca
         $location.path("/login/1");
     };
 
-    $scope.signupRedirect = function() {
-        $location.path("/signup");
+    $scope.clientSignupRedirect = function() {
+        $location.path("/signup/0");
+    };
+
+    $scope.performerSignupRedirect = function() {
+        $location.path("/signup/1");
     };
 });
